@@ -6,8 +6,8 @@ using namespace DirectX;
 
 GameScene::GameScene() {}
 
-GameScene::~GameScene() { 
-	delete model_;
+GameScene::~GameScene() {
+	delete model_; 
 }
 
 void GameScene::Initialize() {
@@ -26,7 +26,7 @@ void GameScene::Initialize() {
 	voiceHandle_ = audio_->PlayWave(soundDataHandle_, true);
 }
 
-void GameScene::Update() { 
+void GameScene::Update() {
 	XMFLOAT2 position = sprite_->GetPosition();
 	position.x += 2.0f;
 	position.y += 1.0f;
@@ -37,7 +37,7 @@ void GameScene::Update() {
 	//debugText_->SetPos(50, 70);
 	//debugText_->Printf("year:%d",2001);
 	value_++;
-	std::string strDebug = std::string("value:") + 
+	std::string strDebug = std::string("value:") +
 	std::to_string(value_);
 	debugText_->Print(strDebug, 50, 50, 1.0f);
 }
@@ -54,7 +54,7 @@ void GameScene::Draw() {
 	/// <summary>
 	/// ここに背景スプライトの描画処理を追加できる
 	/// </summary>
-	
+
 	// スプライト描画後処理
 	Sprite::PostDraw();
 	// 深度バッファクリア
